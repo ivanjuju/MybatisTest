@@ -10,4 +10,8 @@ import java.util.List;
 public interface UserMapper {
 
     List<UserPO> queryAll();
+    default void queryAll2(){
+        System.out.println("哈哈哈哈");
+        return;
+    }
 }

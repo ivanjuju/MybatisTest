@@ -32,11 +32,12 @@ public class MybatisTest {
     }
 
     @Test
-    public void test(){
+    public void test() {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 //        List<Object> objects = sqlSession.selectList("www.ivanzhu.com.repository.mysql.UserMapper.queryAll");
-            UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-            List<UserPO> userPOS = mapper.queryAll();
-            System.out.println(JSON.toJSONString(userPOS));
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+//        mapper.queryAll2();
+        List<UserPO> userPOS = mapper.queryAll();
+        System.out.println(JSON.toJSONString(userPOS));
     }
 }
